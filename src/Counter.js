@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 function Counter() {
     // number의 기본값은 useState(0)에 지정한 0으로 설정하겠다.
     // setNumber 함수는 update하는 함수
-    const [number, setNumber] = useState(0);
+    const [number, setNumber] = useState(10);
 
     const onIncrease = () => {
         // 어떻게 update할지를 넣어줄 수가 있다

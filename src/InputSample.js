@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 
 function InputSample() {
-    const [text, setText] = useState('');
-
-    const onchange = e => {
+    const [text, setText] = useState('입력된 값이 없습니다.');
+    const initText = '입력된 값이 없습니다.';
+    const onChange = e => {
         setText(e.target.value);
     };
 
     const onReset = () => {
-        setText('');
+        setText('입력된 값이 없습니다.');
     };
 
     return (
         <div>
-            <input onChange={onchange} value={text} />
+            <input onChange={onChange} value={text} />
             <button onClick={onReset}>초기화</button>
             <div>
                 <b>값: </b>

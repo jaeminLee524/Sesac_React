@@ -1,8 +1,7 @@
 import React from 'react';
-import Todo from './Todo';
-
+import InputSample2 from './InputSample2';
 function App() {
-    return <Todo />;
+    return <InputSample2 />;
 }
 
 export default App;
