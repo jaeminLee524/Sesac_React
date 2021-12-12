@@ -4,10 +4,11 @@ import './index.css';
 // import App from './App';
 import View from './userListExample/View';
 import reportWebVitals from './reportWebVitals';
+import NomadApp from './react-with-nomad/NomadApp';
 
 ReactDOM.render(
     <React.StrictMode>
-        <View />
+        <NomadApp />
     </React.StrictMode>,
     document.getElementById('root')
 );
