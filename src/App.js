@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import InputSample2 from './InputSample2';
-function App() {
-    return <InputSample2 />;
-=======
 import React, { useRef, useState } from 'react';
 import UserList from './UserList';
 import CreateUser from './CreateUser';
@@ -30,16 +24,19 @@ function App() {
             id: 1,
             username: 'velopert',
             email: 'public.velopert@gmail.com',
+            active: 'true',
         },
         {
             id: 2,
             username: 'tester',
             email: 'tester@example.com',
+            active: 'true',
         },
         {
             id: 3,
             username: 'liz',
             email: 'liz@example.com',
+            active: 'true',
         },
     ]);
 
@@ -62,15 +59,19 @@ function App() {
     const onRemove = id => {
         setUsers(users.filter(user => user.id !== id));
     };
+
+    const onToggle = id => {
+        setUsers(users.map(user => (user.id === id ? { ...user, active: !user.active } : user)));
+    };
+    
     return (
         <>
             <CreateUser username={username} email={email} onChange={onChange} onCreate={onCreate} />
-            <UserList users={users} onRemove={onRemove} />
+            <UserList users={users} onRemove={onRemove} onToggle={onToggle} />
         </>
     );
 
     // return <ValidationSample />;
->>>>>>> d62e85a90fea2120ca9c7fa967188e6528d8c8ae
 }
 
 export default App;
